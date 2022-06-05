@@ -9,7 +9,7 @@ const dates = [
 
 // TODO: Buatlah fungsi createDate
 const createDate = function(dates,posisi){
-  if (posisi === undefined) {
+  if (posisi == undefined) {
     const element =[];
     for (let i = 0; i < dates.length; i++) {
          const dateMili = Date.parse(dates[i]) / 1000;
