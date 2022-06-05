@@ -8,8 +8,11 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = function(dates,posisi){
-  if (posisi == null) {
+const createDate = (dates,posisi) => {
+  if (posisi != null) {
+      const dateMili = Date.parse(dates[posisi]) / 1000;
+      return dateMili.toString();
+  }else{
     const element =[];
     for (let i = 0; i < dates.length; i++) {
          const dateMili = Date.parse(dates[i]) / 1000;
@@ -19,9 +22,6 @@ const createDate = function(dates,posisi){
     const sortDate = element.sort();
     const newDate = sortDate.join("-");
     return newDate;
-  }else{
-    const dateMili = Date.parse(dates[posisi]) / 1000;
-    return dateMili.toString();
   }
  
   
